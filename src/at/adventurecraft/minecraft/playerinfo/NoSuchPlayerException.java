@@ -1,5 +1,9 @@
 package at.adventurecraft.minecraft.playerinfo;
 
+/**
+ * Thrown if the player doesn't exist.
+ * @author Philipp Doppelhofer
+ */
 public final class NoSuchPlayerException extends RuntimeException {
     public NoSuchPlayerException() {
         super();

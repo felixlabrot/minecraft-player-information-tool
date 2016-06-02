@@ -1,6 +1,8 @@
 package at.adventurecraft.minecraft.playerinfo.gui;
 
 import at.adventurecraft.gui.text.MaxSizeDocument;
+import at.adventurecraft.minecraft.playerinfo.util.ImagePanel;
+import at.adventurecraft.minecraft.playerinfo.util.RuntimeIOException;
 import java.awt.Component;
 import java.awt.GridBagConstraints;
 import static java.awt.GridBagConstraints.BOTH;
@@ -27,7 +29,7 @@ public final class PlayerInfoWindow extends JFrame {
     private final UpdateListener l;
     
     public PlayerInfoWindow() {
-        super("MCPIT - Minecraft Player Information Tool - AdventureCraft");
+        super("MCPIT - Minecraft Player Information Tool 1 - AdventureCraft");
         
         l = new UpdateListener(this);
         

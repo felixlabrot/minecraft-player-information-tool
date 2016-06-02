@@ -8,6 +8,7 @@ import java.net.URL;
 import java.net.URLConnection;
 
 /**
+ * Reads text from a remote source.
  * @author Philipp Doppelhofer
  */
 public class URLReader extends Reader implements AutoCloseable {
@@ -19,7 +20,7 @@ public class URLReader extends Reader implements AutoCloseable {
     /**
      * Creates a new character-stream reader whose critical sections will
      * synchronize on the reader itself.
-     * @param url the URL from which to read
+     * @param url the remote URL from which to read
      * @throws java.io.IOException if an I/O error occurs
      */
     public URLReader(URL url) throws IOException {
@@ -80,7 +81,6 @@ public class URLReader extends Reader implements AutoCloseable {
     
     /**
      * Tells whether this stream is ready to be read.
-     *
      * @return True if the next read() is guaranteed not to block for input,
      * false otherwise.  Note that returning false does not guarantee that the
      * next read will block.
@@ -90,7 +90,7 @@ public class URLReader extends Reader implements AutoCloseable {
     }
     
     /**
-     * Reads the complete content of the ressource specified by the URL
+     * Reads the complete content of the ressource.
      * @return the complete content of the ressource
      * @throws IOException if an I/O error occurs
      */

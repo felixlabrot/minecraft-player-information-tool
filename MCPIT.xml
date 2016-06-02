@@ -3,7 +3,7 @@
   <dontWrapJar>false</dontWrapJar>
   <headerType>gui</headerType>
   <jar>C:\Users\Philipp\Documents\BitBucket\minecraft-player-information-tool\dist\MCPIT.jar</jar>
-  <outfile>C:\Users\Philipp\Documents\BitBucket\minecraft-player-information-tool\MCPIT.exe</outfile>
+  <outfile>C:\Users\Philipp\Documents\BitBucket\minecraft-player-information-tool\dist\MCPIT.exe</outfile>
   <errTitle></errTitle>
   <cmdLine></cmdLine>
   <chdir>.</chdir>
@@ -16,7 +16,7 @@
   <icon></icon>
   <singleInstance>
     <mutexName>MCPIT</mutexName>
-    <windowTitle>MCPIT - Minecraft Player Information Tool - AdventureCraft</windowTitle>
+    <windowTitle>MCPIT - Minecraft Player Information Tool 1 - AdventureCraft</windowTitle>
   </singleInstance>
   <jre>
     <path></path>

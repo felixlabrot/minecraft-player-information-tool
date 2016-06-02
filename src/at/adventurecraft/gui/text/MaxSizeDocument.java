@@ -13,7 +13,7 @@ public final class MaxSizeDocument extends PlainDocument {
     private final int maxSize;
     
     /**
-     * Constructs a new {@code MaxSizeDocument} with the specified maximum length.
+     * Creates a new {@code MaxSizeDocument} with the specified maximum length.
      * @param maxSize the maximum size that should be allowed
      * @throws IllegalArgumentException if the specified maximum size if not greater or equal zero
      */

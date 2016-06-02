@@ -8,6 +8,7 @@ import static at.adventurecraft.minecraft.playerinfo.MinecraftPlayerInfo.getLega
 import static at.adventurecraft.minecraft.playerinfo.MinecraftPlayerInfo.getUUID;
 import at.adventurecraft.minecraft.playerinfo.NoSuchPlayerException;
 import static at.adventurecraft.minecraft.playerinfo.gui.PlayerInfoWindow.DEFAULT_IMAGE;
+import at.adventurecraft.minecraft.playerinfo.util.RuntimeIOException;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
