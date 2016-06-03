@@ -74,25 +74,25 @@ final class UpdateListener extends KeyAdapter implements ActionListener {
             piw.details.setText(info_json.toString());
             
             piw.requestTime.setText(getLastSkinChangeTime(info_json).toString());
+            
+            try {
+                URL url = new URL("http://www.minecraft-skin-viewer.net/3d.php?layers=true&aa=true&a=0&w=330&wt=10&abg=330&abd=40&ajg=340&ajd=20&ratio=9&format=png&login=" + piw.currentName.getText() + "&headOnly=false&displayHairs=true&randomness=358");
+                Image skin = ImageIO.read(url);
+                piw.skin.setImage(skin);
+                piw.skin.setAlpha(1);
+            } catch (IOException ex) {
+                try {
+                    piw.skin.setAlpha(0);
+                    piw.skin.setImage(DEFAULT_IMAGE);
+                } catch(IOException e) {
+                    throw new RuntimeIOException(e);
+                }
+            }
         } catch (NoSuchPlayerException ex) {
             clear();
             JOptionPane.showMessageDialog(piw, "A player with this name doesn't exist!", "Player doesn't exist", JOptionPane.WARNING_MESSAGE);
         } catch (IOException ex) {
             JOptionPane.showMessageDialog(piw, "Can't retrive user information.\n" + ex.getLocalizedMessage(), "Error", JOptionPane.ERROR_MESSAGE);
-        }
-        
-        try {
-            URL url = new URL("http://www.minecraft-skin-viewer.net/3d.php?layers=true&aa=true&a=0&w=330&wt=10&abg=330&abd=40&ajg=340&ajd=20&ratio=9&format=png&login=" + piw.currentName.getText() + "&headOnly=false&displayHairs=true&randomness=358");
-            Image skin = ImageIO.read(url);
-            piw.skin.setImage(skin);
-            piw.skin.setAlpha(1);
-        } catch (IOException ex) {
-            try {
-                piw.skin.setAlpha(0);
-                piw.skin.setImage(DEFAULT_IMAGE);
-            } catch(IOException e) {
-                throw new RuntimeIOException(e);
-            }
         }
     }
     /*

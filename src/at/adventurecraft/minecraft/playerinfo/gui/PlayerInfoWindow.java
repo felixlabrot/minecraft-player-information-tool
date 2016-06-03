@@ -65,7 +65,7 @@ public final class PlayerInfoWindow extends JFrame {
         
         detailsScrollPane = new JScrollPane(details);
         
-        ok = new JButton("Update");
+        ok = new JButton("Get player information!");
         ok.addActionListener(l);
         
         try {
